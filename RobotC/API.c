@@ -21,6 +21,7 @@ bool isPressed(int button){
 }
 int sensorCalibrator(int sensor){
 	int calibrationVal;
+	//Code
 	return calibrationVal;
 }
 int apiJoystickDrive(int joyStick, int maxSpeed, int throttle, int deadzone, bool isReversed){
@@ -35,9 +36,9 @@ int apiJoystickDrive(int joyStick, int maxSpeed, int throttle, int deadzone, boo
 		}
 		}else{
 		if(abs(joyStick) > deadzone && isReversed){
-			x = 0 - maxSpeed  * throttle / 100;
+			x = 0 - maxSpeed  * (throttle / 100);
 			}else if(abs(joyStick) > deadzone && isReversed == false){
-			x = maxSpeed * throttle / 100;
+			x = maxSpeed * (throttle / 100);
 			}else{
 			x = 0;
 		}
@@ -46,26 +47,38 @@ int apiJoystickDrive(int joyStick, int maxSpeed, int throttle, int deadzone, boo
 }
 /*================================================================================================*/
 void setMotorValSingleJoyDualMotor(int joyStickX1, int joyStickY1, int maxSpeed, int throttle, int deadzone, bool isReversed){
-		motor[motorFrontLeft] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) - apiJoystickDrive(joyStickX1, maxSpeed, throttle, deadzone, isReversed);
-		motor[motorFrontRight] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) + apiJoystickDrive(joyStickX1, maxSpeed, throttle, deadzone, isReversed);
+	motor[motorFrontLeft] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) - apiJoystickDrive(joyStickX1, maxSpeed, throttle, deadzone, isReversed);
+	motor[motorFrontRight] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) + apiJoystickDrive(joyStickX1, maxSpeed, throttle, deadzone, isReversed);
 }
 void setMotorValDualJoyDualMotor(int joyStickY1, int joyStickX2, int maxSpeed, int throttle, int deadzone, bool isReversed){
-		motor[motorFrontLeft] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) - apiJoystickDrive(joyStickX2, maxSpeed, throttle, deadzone, isReversed);
-		motor[motorFrontRight] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) + apiJoystickDrive(joyStickX2, maxSpeed, throttle, deadzone, isReversed);
+	motor[motorFrontLeft] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) - apiJoystickDrive(joyStickX2, maxSpeed, throttle, deadzone, isReversed);
+	motor[motorFrontRight] = apiJoystickDrive(joyStickY1, maxSpeed, throttle, deadzone, isReversed) + apiJoystickDrive(joyStickX2, maxSpeed, throttle, deadzone, isReversed);
 }
 void setMotorValQuad(int joyStickX1, int joyStickY1, int joyStickX2, int joyStickY2, int maxSpeed, int throttle, int deadzone, bool isReversed){
-
+	//Code
 }
 void setMotorOmnidrive(int joyStickX1, int joyStickY1, int joyStickX2, int joyStickY2, int maxSpeed, int throttle, int deadzone, bool isReversed){
-
+	//Code
 }
-void buttonOpenClose(int button, int button1, int maxSpeed, bool isReversed){
-
+int buttonOpenClose(int button, int button1, int maxSpeed, bool isReversed){
+	int motorValue;
+	//Code
+	return motorValue;
 }
-void setButtonHoldActivation(int button, int maxSpeed, bool isReversed){
-
+int setButtonHoldActivation(int button, int maxSpeed, bool isReversed){
+	int motorValue;
+	//Code
+	return motorValue;
+}
+int motorTurnOnButtonPress(int button, int maxSpeed, bool isReversed){
+	int motorValue;
+	//Code
+	return motorValue;
 }
 
 task main(){
 
+	while(true){
+		//Controller Commands Go Here.
+	}
 }
